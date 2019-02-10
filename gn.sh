@@ -1,6 +1,3 @@
-
-#!/bin/bash
-
 while true; do
         if [ ! `pgrep graftnoded` ]; then
                 graftnoded --testnet --out-peers 10 --db-salvage --enforce-dns-checkpointing --max-concurrency 3 --tos-flag 1 --detach &
