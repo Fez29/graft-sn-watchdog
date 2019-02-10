@@ -1,3 +1,5 @@
+#!/bin/bash
+
 while true; do
         if [ ! `pgrep graft_server` ]; then
                 graft_server --log-file supernode.log --log-level 1 > out.log 2>&1 &
