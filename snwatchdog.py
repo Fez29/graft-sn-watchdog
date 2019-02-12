@@ -69,12 +69,12 @@ class GraftSN(object):
                              self.advprint(" SN Update Age: %s" % updateage, bcolors.OKBLUE, False)
                              ##self.telegram_tx("SN List Count: " + self.dectostr(len(jsondatasn["result"]["items"])) + " SN Update Age: " + updateage)						 
                              if len(jsondatasn["result"]["items"]) <= 5:
-                               bashCommandgskill = "killall -9 graft_server"
+                               bashCommandgskill = "killall -9 graft-supernode"
                                bashCommandgnkill = "killall -9 graftnoded"
                                subprocess.check_output(['bash','-c', bashCommandgskill])
                                subprocess.check_output(['bash','-c', bashCommandgnkill])
-                               self.advprint("Reset Graftnoded and Graft_Server", bcolors.FAIL)
-                               ##self.telegram_tx("SN 01 Reset Graftnoded and Graft_Server")
+                               self.advprint("Reset Graftnoded and graft-supernode", bcolors.FAIL)
+                               ##self.telegram_tx("SN 01 Reset Graftnoded and graft-supernode")
                          except requests.exceptions.HTTPError as errgsh:
                              self.advprint("GraftServer Http Error: %s" % errgsh, bcolors.FAIL)
                          except requests.exceptions.ConnectionError as errgsc:

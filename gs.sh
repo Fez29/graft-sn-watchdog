@@ -2,7 +2,7 @@
 
 while true; do
         if [ ! `pgrep graft_server` ]; then
-                graft_server --log-file supernode.log --log-level 1 &
+                graft-supernode --log-file supernode.log --log-level 1 &
                 for ((i=0; i<600; i+=5)); do
                         sleep 5
                         if [ ! `pgrep graft_server` ]; then
