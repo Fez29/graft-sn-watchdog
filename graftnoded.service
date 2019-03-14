@@ -1,0 +1,15 @@
+##not need as is automated by deb already
+[Unit]
+Description=Graftnoded
+After=online.network.target
+
+[Service]
+Type=forking
+# Another Type option: forking
+User=gareth
+ExecStart=/home/gareth/snbuild/graftnoded --testnet --rpc-bind-ip 0.0.0.0 --restricted-rpc --confirm-external-bind --detach
+Restart=on-failure
+# Other Restart options: or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target
