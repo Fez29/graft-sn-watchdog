@@ -1,0 +1,8 @@
+/home/graft-sn/supernode/sn1/logs/sn1_log.log {
+    daily
+    rotate 2
+    missingok
+    compress
+    create
+    su root syslog
+}
