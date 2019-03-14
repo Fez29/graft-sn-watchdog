@@ -1,0 +1,17 @@
+##Systemd file to automate starting of multiple binaries (variabilized)
+## example to enable sn1 : sudo systemctl enable supernode@1.service
+## start : sudo systemctl start supernode@1.service
+[Unit]
+Description=Ssupernode
+After=online.network.target
+
+[Service]
+Type=simple
+# Another Type option: forking
+User=root
+ExecStart=/home/gareth/%i/supernode --log-file ~/%i/logs/%i_log.log &
+Restart=on-failure
+# Other Restart options: or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target
