@@ -1,0 +1,8 @@
+
+/home/gareth/.graft/graft.log {
+    daily
+    rotate 2
+    missingok
+    compress
+    create
+}
