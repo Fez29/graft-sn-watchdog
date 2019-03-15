@@ -1,8 +1,8 @@
 ##Systemd file to automate starting of multiple binaries (variabilized)
-## example to enable sn1 : sudo systemctl enable supernode@1.service
-## start : sudo systemctl start supernode@1.service
+## example to enable sn1 : sudo systemctl enable supernode@sn1.service
+## start : sudo systemctl start supernode@sn1.service
 [Unit]
-Description=Ssupernode
+Description=Supernode
 After=online.network.target
 
 [Service]
