@@ -1,4 +1,4 @@
-
+##///etc/logrotate.d/sn-logs
 /home/gareth/.graft/graft.log {
     daily
     rotate 2
